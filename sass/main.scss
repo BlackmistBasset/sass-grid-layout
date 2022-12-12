@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header header" "section1 section2" "footer footer";
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 5% 90% 5%;
+    height: 100vh;
+
+    header {
+        grid-column: 1/3;
+
+        nav {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 15% 30%;
+            align-self: stretch;
+            justify-content: space-between;
+            align-content: center;
+            background-color: darkgray;
+
+            .logo {
+                background-color: white;
+                height: 30px;
+                width: 80px;
+                display: grid;
+                justify-self: start;
+                margin-left: 20px;
+                align-self: center;
+                align-content: center;
+                justify-content: center;
+            }
+
+            div {
+                align-self: center;
+                justify-self: end;
+                margin-right: 20px;
+
+                li {
+                    display: inline-grid;
+                    margin: 0px 20px;
+                }
+            }
+        }
+    }
+
+    .section-1 {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        justify-items: center;
+        align-items: center;
+        .img-container {
+            width: 70%;
+             height: 70%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .side-text {
+            align-self: start;
+            width: 70%;
+            text-align: justify;
+        }
+    }
+
+    .section-2 {
+        display: grid;
+        grid-template-rows: 5% 5% 25% 25% 40%;
+        h1, h2 {
+            padding:0 5%;
+         padding-top: 15px;   
+        }
+        .cards-container {
+            width: 100%;
+            margin: 30px 0px;
+            display: grid;
+            grid-template-rows: 100%;
+            grid-template-columns: repeat(4, 20%);
+            grid-gap: 30px;
+            justify-content: center;
+            img {
+                height: 100%;
+                width: 80%;
+                justify-self: center;
+            }
+        
+        }
+        .text-container {
+            margin-top: 20px;
+            padding:0 5%;
+
+            p {
+                text-align: justify;
+            }
+        }
+
+        .bottom-container {
+            display: grid;
+            margin-top: 20px;
+            padding:0 5%;
+            grid-template-columns: 10% 90%;
+            grid-template-rows: 50% 50%;
+            img {
+                width: 100%;
+                align-self: center;
+            }
+            .small-text-container{ 
+                align-self: center;
+            
+            p {
+                text-align: justify;
+                padding-left: 20px;
+            }
+        }
+
+            .banner {
+                box-sizing: content-box;
+                grid-column: 2/3;
+                
+                height: 50%;
+                margin-left: 20px;
+        
+   
+                background-color: darkgray;
+            }
+        }
+    }
+
+    footer {
+        grid-column: 1/3;
+        justify-self: center;
+    }
+}
